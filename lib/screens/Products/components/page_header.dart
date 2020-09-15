@@ -11,11 +11,9 @@ class PageHeader extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        IconButton(
-          onPressed: () {},
-          icon: Icon(Icons.sort),
-          iconSize: getProportionateScreenWidth(30),
-          padding: EdgeInsets.zero,
+        Icon(
+          Icons.sort,
+          size: getProportionateScreenWidth(30),
         ),
         CircleAvatar(
           backgroundImage: AssetImage('assets/images/andrew.jpg'),

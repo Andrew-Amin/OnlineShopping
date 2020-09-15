@@ -39,6 +39,7 @@ class ProductCard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Expanded(
+                    flex: 3,
                     child: Padding(
                       padding: EdgeInsets.symmetric(
                           horizontal: kDefaultPadding,
@@ -52,15 +53,18 @@ class ProductCard extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Container(
-                    padding: EdgeInsets.all(
-                        getProportionateScreenWidth(kDefaultPadding / 2)),
-                    child: SvgPicture.asset('assets/icons/add_white.svg'),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(10.0),
+                  Expanded(
+                    flex: 1,
+                    child: Container(
+                      padding: EdgeInsets.all(
+                          getProportionateScreenWidth(kDefaultPadding / 2)),
+                      child: SvgPicture.asset('assets/icons/add_white.svg'),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(10.0),
+                        ),
+                        color: kPrimaryColor,
                       ),
-                      color: kPrimaryColor,
                     ),
                   ),
                 ],

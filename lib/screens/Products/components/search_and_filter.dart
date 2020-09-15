@@ -37,6 +37,7 @@ class SearchAndFilter extends StatelessWidget {
                 controller: _textEditingController,
                 onChanged: (searchQuery) {},
                 cursorColor: kPrimaryColor,
+                textInputAction: TextInputAction.search,
                 decoration: InputDecoration(
                   filled: true,
                   fillColor: Colors.grey.shade100,

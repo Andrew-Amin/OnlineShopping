@@ -36,30 +36,33 @@ class ProductsScreen extends StatelessWidget {
             scrollDirection: Axis.vertical,
             shrinkWrap: true,
             slivers: [
-              SliverList(
-                delegate: SliverChildListDelegate(
-                  [
-                    PageHeader(),
-                    Text(
-                      'Newest products',
-                      style: headingStyle,
-                    ),
-                    SizedBox(
-                      height: getProportionateScreenHeight(15.0),
-                    ),
-                    SearchAndFilter(
-                        textEditingController: _textEditingController),
-                    CategorySelector(
-                      height: getProportionateScreenHeight(50.0),
-                      categories: _categories,
-                    ),
-                  ],
-                ),
-              ),
+              buildProductsSliverList(),
               buildProductsSliverGrid(),
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  SliverList buildProductsSliverList() {
+    return SliverList(
+      delegate: SliverChildListDelegate(
+        [
+          PageHeader(),
+          Text(
+            'Newest products',
+            style: headingStyle,
+          ),
+          SizedBox(
+            height: getProportionateScreenHeight(15.0),
+          ),
+          SearchAndFilter(textEditingController: _textEditingController),
+          CategorySelector(
+            height: getProportionateScreenHeight(50.0),
+            categories: _categories,
+          ),
+        ],
       ),
     );
   }
