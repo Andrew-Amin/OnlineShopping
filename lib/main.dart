@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:shop_app/constants.dart';
-import 'package:shop_app/screens/home/home_screen.dart';
+import 'package:shop_app/routes.dart';
+import 'package:shop_app/screens/sign_in/sign_in_screen.dart';
+import 'package:shop_app/screens/splash/splash_screen.dart';
+import 'package:shop_app/theme.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,11 +15,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        textTheme: Theme.of(context).textTheme.apply(bodyColor: kTextColor),
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: HomeScreen(),
+      theme: theme(),
+      // home: SplashScreen(),
+      // We use routeName so that we dont need to remember the name
+      initialRoute: SignInScreen.routeName,
+      routes: routes,
     );
   }
 }

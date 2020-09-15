@@ -1,18 +1,17 @@
-[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/abuanwar072/E-commerce-App-UI-Flutter)
+# E-Commerce Complate Flutter UI Staring code
 
-# E-commerce App - Flutter UI
+### Note that: This is not complete yet
 
-## [Watch it on YouTube](https://youtu.be/XBKzpTz65Io)
+## [Watch it on YouTube](https://youtu.be/YEJPg2jwzI8)
 
 **Packages we are using:**
 
 - flutter_svg: [link](https://pub.dev/packages/flutter_svg)
 
+Complete responsive e-commerce app UI by using flutter.
 
-On our E-commerce app UI has two pages one for the product page which has a horizontal list of categories then a list of our products. Then on the details page, it shows the price and short description of the product with the Buy Now button. The best part of our E-commerce app is, each product has its own color which looks great.
+### Previews of Final UI
 
-### E-commerce App Final UI
-
-![intro](intro.gif)
-
-![App UI](/ui.png)
+![Preview](/intro.gif)
+![Preview](/1.png)
+![Preview](2.png)
