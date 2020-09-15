@@ -1,0 +1,145 @@
+<html>
+<head>
+<title>products_screen.dart</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #a9b7c6;}
+.s1 { color: #6a8759;}
+.s2 { color: #cc7832;}
+.s3 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+products_screen.dart</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">'package:flutter/cupertino.dart'</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">'package:flutter/material.dart'</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">'package:flutter_svg/flutter_svg.dart'</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">'package:flutter_svg/svg.dart'</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">'package:shop_app/models/Product.dart'</span><span class="s2">;</span>
+
+<span class="s0">import </span><span class="s1">'../../size_config.dart'</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">'components/product_card.dart'</span><span class="s2">;</span>
+
+<span class="s2">class </span><span class="s0">ProductsScreen </span><span class="s2">extends </span><span class="s0">StatelessWidget {</span>
+  <span class="s0">static String routeName = </span><span class="s1">&quot;/Products&quot;</span><span class="s2">;</span>
+
+  <span class="s0">@override</span>
+  <span class="s0">Widget build(BuildContext context) {</span>
+    <span class="s2">return </span><span class="s0">Scaffold(</span>
+      <span class="s0">body: SafeArea(</span>
+        <span class="s0">child: SizedBox(</span>
+          <span class="s0">width: double.infinity</span><span class="s2">,</span>
+          <span class="s0">child: Padding(</span>
+            <span class="s0">padding: EdgeInsets.symmetric(</span>
+                <span class="s0">horizontal: getProportionateScreenWidth(</span><span class="s3">5.0</span><span class="s0">))</span><span class="s2">,</span>
+            <span class="s0">child: CustomScrollView(</span>
+              <span class="s0">slivers: [</span>
+                <span class="s0">buildProductsSliverAppBar()</span><span class="s2">,</span>
+                <span class="s0">SliverList(</span>
+                  <span class="s0">delegate: SliverChildBuilderDelegate(</span>
+                    <span class="s0">(BuildContext context</span><span class="s2">, </span><span class="s0">int index) {</span>
+                      <span class="s2">return </span><span class="s0">Container(</span>
+                        <span class="s0">alignment: Alignment.center</span><span class="s2">,</span>
+                        <span class="s0">height: SizeConfig.screenHeight * </span><span class="s3">0.3</span><span class="s2">,</span>
+                        <span class="s0">child: Column(</span>
+                          <span class="s0">children: [</span>
+                            <span class="s0">Text(</span>
+                              <span class="s1">'Newest products'</span><span class="s2">,</span>
+                              <span class="s0">style: TextStyle(</span>
+                                <span class="s0">fontWeight: FontWeight.bold</span><span class="s2">,</span>
+                                <span class="s0">fontSize: </span><span class="s3">30.0</span><span class="s2">,</span>
+                              <span class="s0">)</span><span class="s2">,</span>
+                            <span class="s0">)</span><span class="s2">,</span>
+                            <span class="s0">Row(</span>
+                              <span class="s0">mainAxisAlignment: MainAxisAlignment.spaceBetween</span><span class="s2">,</span>
+                              <span class="s0">children: [</span>
+                                <span class="s0">SizedBox(</span>
+                                  <span class="s0">child: TextField(</span>
+                                    <span class="s0">onChanged: (value) {}</span><span class="s2">,</span>
+                                    <span class="s0">textAlign: TextAlign.center</span><span class="s2">,</span>
+                                    <span class="s0">decoration: InputDecoration(</span>
+                                      <span class="s0">contentPadding: EdgeInsets.all(</span>
+                                          <span class="s0">getProportionateScreenWidth(</span><span class="s3">10.0</span><span class="s0">))</span><span class="s2">,</span>
+                                      <span class="s0">filled: </span><span class="s2">true,</span>
+                                      <span class="s0">fillColor: Color(</span><span class="s3">0xFFF8F8F8</span><span class="s0">)</span><span class="s2">,</span>
+                                      <span class="s0">prefixIcon: SvgPicture.asset(</span>
+                                          <span class="s1">'assets/icons/Search Icon.svg'</span><span class="s0">)</span><span class="s2">,</span>
+                                      <span class="s0">border: OutlineInputBorder(</span>
+                                        <span class="s0">borderRadius:</span>
+                                            <span class="s0">BorderRadius.circular(</span><span class="s3">10.0</span><span class="s0">)</span><span class="s2">,</span>
+                                        <span class="s0">borderSide: BorderSide.none</span><span class="s2">,</span>
+                                      <span class="s0">)</span><span class="s2">,</span>
+                                      <span class="s0">hintText: </span><span class="s1">'Search products'</span><span class="s2">,</span>
+                                    <span class="s0">)</span><span class="s2">,</span>
+                                  <span class="s0">)</span><span class="s2">,</span>
+                                  <span class="s0">height: getProportionateScreenHeight(</span><span class="s3">50.0</span><span class="s0">)</span><span class="s2">,</span>
+                                  <span class="s0">width: SizeConfig.screenWidth * </span><span class="s3">0.65</span><span class="s2">,</span>
+                                <span class="s0">)</span><span class="s2">,</span>
+                                <span class="s0">Container(</span>
+                                  <span class="s0">height: getProportionateScreenHeight(</span><span class="s3">50.0</span><span class="s0">)</span><span class="s2">,</span>
+                                  <span class="s0">child:</span>
+                                      <span class="s0">Image.asset(</span><span class="s1">'assets/images/slider.png'</span><span class="s0">)</span><span class="s2">,</span>
+                                  <span class="s0">decoration: BoxDecoration(</span>
+                                    <span class="s0">borderRadius: BorderRadius.circular(</span><span class="s3">10.0</span><span class="s0">)</span><span class="s2">,</span>
+                                    <span class="s0">color: Color(</span><span class="s3">0xFFF8F8F8</span><span class="s0">)</span><span class="s2">,</span>
+                                  <span class="s0">)</span><span class="s2">,</span>
+                                <span class="s0">)</span><span class="s2">,</span>
+                              <span class="s0">]</span><span class="s2">,</span>
+                            <span class="s0">)</span><span class="s2">,</span>
+                          <span class="s0">]</span><span class="s2">,</span>
+                        <span class="s0">)</span><span class="s2">,</span>
+                      <span class="s0">)</span><span class="s2">;</span>
+                    <span class="s0">}</span><span class="s2">,</span>
+                    <span class="s0">childCount: </span><span class="s3">1</span><span class="s2">,</span>
+                  <span class="s0">)</span><span class="s2">,</span>
+                <span class="s0">)</span><span class="s2">,</span>
+                <span class="s0">buildProductsSliverGrid()</span><span class="s2">,</span>
+              <span class="s0">]</span><span class="s2">,</span>
+            <span class="s0">)</span><span class="s2">,</span>
+          <span class="s0">)</span><span class="s2">,</span>
+        <span class="s0">)</span><span class="s2">,</span>
+      <span class="s0">)</span><span class="s2">,</span>
+    <span class="s0">)</span><span class="s2">;</span>
+  <span class="s0">}</span>
+
+  <span class="s0">SliverGrid buildProductsSliverGrid() {</span>
+    <span class="s2">return </span><span class="s0">SliverGrid.count(</span>
+      <span class="s0">crossAxisCount: </span><span class="s3">2</span><span class="s2">,</span>
+      <span class="s0">children: [</span>
+        <span class="s0">...List.generate(</span>
+          <span class="s0">demoProducts.length</span><span class="s2">,</span>
+          <span class="s0">(index) {</span>
+            <span class="s0">Product _product = demoProducts[index]</span><span class="s2">;</span>
+            <span class="s2">return </span><span class="s0">ProductCard(product: _product)</span><span class="s2">;</span>
+          <span class="s0">}</span><span class="s2">,</span>
+        <span class="s0">)</span><span class="s2">,</span>
+      <span class="s0">]</span><span class="s2">,</span>
+    <span class="s0">)</span><span class="s2">;</span>
+  <span class="s0">}</span>
+
+  <span class="s0">SliverAppBar buildProductsSliverAppBar() {</span>
+    <span class="s2">return </span><span class="s0">SliverAppBar(</span>
+      <span class="s0">elevation: </span><span class="s3">0</span><span class="s2">,</span>
+      <span class="s0">backgroundColor: Colors.white</span><span class="s2">,</span>
+      <span class="s0">leading: IconButton(</span>
+        <span class="s0">icon: SvgPicture.asset(</span>
+          <span class="s1">'assets/icons/sort.svg'</span><span class="s2">,</span>
+          <span class="s0">height: getProportionateScreenWidth(</span><span class="s3">50.0</span><span class="s0">)</span><span class="s2">,</span>
+        <span class="s0">)</span><span class="s2">,</span>
+        <span class="s0">onPressed: () {}</span><span class="s2">,</span>
+      <span class="s0">)</span><span class="s2">,</span>
+      <span class="s0">actions: [</span>
+        <span class="s0">CircleAvatar(</span>
+          <span class="s0">backgroundImage: AssetImage(</span><span class="s1">'assets/images/andrew.jpg'</span><span class="s0">)</span><span class="s2">,</span>
+        <span class="s0">)</span><span class="s2">,</span>
+      <span class="s0">]</span><span class="s2">,</span>
+    <span class="s0">)</span><span class="s2">;</span>
+  <span class="s0">}</span>
+<span class="s0">}</span>
+</pre>
+</body>
+</html>
