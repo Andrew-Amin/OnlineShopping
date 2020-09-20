@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop_app/screens/profile/profile_screen.dart';
 import '../../../size_config.dart';
 
 class PageHeader extends StatelessWidget {
@@ -15,9 +16,17 @@ class PageHeader extends StatelessWidget {
           Icons.sort,
           size: getProportionateScreenWidth(30),
         ),
-        CircleAvatar(
-          backgroundImage: AssetImage('assets/images/andrew.jpg'),
-          radius: getProportionateScreenWidth(20),
+        Hero(
+          tag: 'ProfilePicture',
+          child: GestureDetector(
+            onTap: () {
+              Navigator.pushNamed(context, ProfileScreen.routeName);
+            },
+            child: CircleAvatar(
+              backgroundImage: AssetImage('assets/images/profile.jpg'),
+              radius: getProportionateScreenWidth(20),
+            ),
+          ),
         ),
       ],
     );
