@@ -4,12 +4,14 @@ class Product {
   final String title, description;
   final List<String> images;
   final List<Color> colors;
+  final List<int> sizes;
   final double rating, price;
   final bool isFavourite, isPopular;
 
   Product({
     @required this.images,
     @required this.colors,
+    @required this.sizes,
     this.rating = 0.0,
     this.isFavourite = false,
     this.isPopular = false,
@@ -35,6 +37,7 @@ List<Product> demoProducts = [
       Color(0xFFDECB9C),
       Colors.white,
     ],
+    sizes: [48, 49, 45, 51],
     title: "Wireless Controller for PS4™",
     price: 64.99,
     description: description,
@@ -52,6 +55,7 @@ List<Product> demoProducts = [
       Color(0xFFDECB9C),
       Colors.white,
     ],
+    sizes: [48, 49, 45, 51],
     title: "Nike Sport White - Man Pant",
     price: 50.5,
     description: description,
@@ -68,6 +72,7 @@ List<Product> demoProducts = [
       Color(0xFFDECB9C),
       Colors.white,
     ],
+    sizes: [48, 49, 45, 51],
     title: "Gloves XC Omega - Polygon",
     price: 36.55,
     description: description,
@@ -79,6 +84,7 @@ List<Product> demoProducts = [
     images: [
       "assets/images/wireless headset.png",
     ],
+    sizes: [48, 49, 45, 51],
     colors: [
       Color(0xFFF6625E),
       Color(0xFF836DB8),
@@ -104,6 +110,7 @@ List<Product> demoProducts = [
       Color(0xFFDECB9C),
       Colors.white,
     ],
+    sizes: [48, 49, 45, 51],
     title: "Wireless Controller for PS4™",
     price: 64.99,
     description: description,
@@ -121,6 +128,7 @@ List<Product> demoProducts = [
       Color(0xFFDECB9C),
       Colors.white,
     ],
+    sizes: [48, 49, 45, 51],
     title: "Nike Sport White - Man Pant",
     price: 50.5,
     description: description,
@@ -137,6 +145,7 @@ List<Product> demoProducts = [
       Color(0xFFDECB9C),
       Colors.white,
     ],
+    sizes: [48, 49, 45, 51],
     title: "Gloves XC Omega - Polygon",
     price: 36.55,
     description: description,
@@ -148,6 +157,7 @@ List<Product> demoProducts = [
     images: [
       "assets/images/wireless headset.png",
     ],
+    sizes: [48, 49, 45, 51],
     colors: [
       Color(0xFFF6625E),
       Color(0xFF836DB8),
@@ -173,6 +183,7 @@ List<Product> demoProducts = [
       Color(0xFFDECB9C),
       Colors.white,
     ],
+    sizes: [48, 49, 45, 51],
     title: "Wireless Controller for PS4™",
     price: 64.99,
     description: description,
@@ -190,6 +201,7 @@ List<Product> demoProducts = [
       Color(0xFFDECB9C),
       Colors.white,
     ],
+    sizes: [48, 49, 45, 51],
     title: "Nike Sport White - Man Pant",
     price: 50.5,
     description: description,
@@ -206,6 +218,7 @@ List<Product> demoProducts = [
       Color(0xFFDECB9C),
       Colors.white,
     ],
+    sizes: [48, 49, 45, 51],
     title: "Gloves XC Omega - Polygon",
     price: 36.55,
     description: description,
@@ -223,6 +236,7 @@ List<Product> demoProducts = [
       Color(0xFFDECB9C),
       Colors.white,
     ],
+    sizes: [48, 49, 45, 51],
     title: "Logitech Head",
     price: 20.20,
     description: description,

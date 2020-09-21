@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:shop_app/components/category_selector.dart';
 import 'package:shop_app/models/Product.dart';
 
 import '../../../constants.dart';
@@ -7,6 +6,7 @@ import '../../../size_config.dart';
 import 'page_header.dart';
 import 'product_card.dart';
 import 'search_and_filter.dart';
+import 'sliver_header_delegate.dart';
 
 class Body extends StatelessWidget {
   final TextEditingController _textEditingController = TextEditingController();
@@ -18,6 +18,7 @@ class Body extends StatelessWidget {
     'Gloves',
     'Shirts'
   ];
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -31,9 +32,15 @@ class Body extends StatelessWidget {
         ),
         child: CustomScrollView(
           scrollDirection: Axis.vertical,
-          shrinkWrap: true,
           slivers: [
             _buildProductsSliverList(),
+            SliverPersistentHeader(
+              pinned: true,
+              floating: true,
+              delegate: SliverHeaderDelegate(
+                categories: _categories,
+              ),
+            ),
             _buildProductsSliverGrid(),
           ],
         ),
@@ -50,14 +57,8 @@ class Body extends StatelessWidget {
             'Newest products',
             style: headingStyle,
           ),
-          SizedBox(
-            height: getProportionateScreenHeight(15.0),
-          ),
+          SizedBox(height: getProportionateScreenHeight(15.0)),
           SearchAndFilter(textEditingController: _textEditingController),
-          CategorySelector(
-            height: getProportionateScreenHeight(50.0),
-            categories: _categories,
-          ),
         ],
       ),
     );

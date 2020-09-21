@@ -6,15 +6,16 @@ import 'package:shop_app/size_config.dart';
 typedef ValueChanged<T> = void Function(T value);
 
 class CategorySelector extends StatefulWidget {
-  CategorySelector({
-    this.height = 50,
-    this.onClick,
-    this.categories,
-  });
+  CategorySelector(
+      {this.height = 50,
+      this.onClick,
+      this.categories,
+      this.backgroundColor = Colors.transparent});
 
   final double height;
   final ValueChanged<String> onClick;
   final List categories;
+  final Color backgroundColor;
   @override
   _CategorySelectorState createState() => _CategorySelectorState();
 }
@@ -26,6 +27,7 @@ class _CategorySelectorState extends State<CategorySelector> {
   Widget build(BuildContext context) {
     return Container(
       height: widget.height,
+      color: widget.backgroundColor,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: widget.categories.length,
@@ -56,18 +58,18 @@ class _CategorySelectorState extends State<CategorySelector> {
                       ),
                     ),
                   ),
-//                  Container(
-//                    height: 4,
-//                    width: 30,
-//                    margin: EdgeInsets.only(top: 5.0),
-//                    //padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
-//                    decoration: BoxDecoration(
-//                      borderRadius: BorderRadius.circular(10),
-//                      color: index == selectedIndex
-//                          ? kPrimaryColor
-//                          : Colors.transparent,
-//                    ),
-//                  ),
+                  Container(
+                    height: 2,
+                    width: 30,
+                    margin: EdgeInsets.only(top: 5.0),
+                    //padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: index == selectedIndex
+                          ? kPrimaryColor
+                          : Colors.transparent,
+                    ),
+                  ),
                 ],
               ),
             ),

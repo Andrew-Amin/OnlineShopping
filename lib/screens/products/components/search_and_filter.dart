@@ -40,7 +40,7 @@ class SearchAndFilter extends StatelessWidget {
                 textInputAction: TextInputAction.search,
                 decoration: InputDecoration(
                   filled: true,
-                  fillColor: Colors.grey.shade100,
+                  fillColor: kSecondaryLightColor,
                   focusColor: kPrimaryColor,
                   hintText: 'Search products...',
                   prefixIcon: Icon(
@@ -65,7 +65,7 @@ class SearchAndFilter extends StatelessWidget {
             height: getProportionateScreenHeight(60.0),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10.0),
-              color: Colors.grey.shade100,
+              color: kSecondaryLightColor,
             ),
           ),
         )
