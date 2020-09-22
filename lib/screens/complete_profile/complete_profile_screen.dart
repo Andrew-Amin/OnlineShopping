@@ -10,7 +10,7 @@ class CompleteProfileScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('Sign Up'),
       ),
-      body: Body(),
+      body: CompleteProfileBody(),
     );
   }
 }

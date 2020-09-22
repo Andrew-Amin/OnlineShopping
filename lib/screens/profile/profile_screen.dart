@@ -10,7 +10,7 @@ class ProfileScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('Profile'),
       ),
-      body: Body(),
+      body: ProfileBody(),
     );
   }
 }

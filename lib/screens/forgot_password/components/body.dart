@@ -7,7 +7,7 @@ import 'package:shop_app/size_config.dart';
 
 import '../../../constants.dart';
 
-class Body extends StatelessWidget {
+class ForgetPasswordBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(

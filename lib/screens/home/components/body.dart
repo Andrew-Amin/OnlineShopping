@@ -7,7 +7,7 @@ import 'home_header.dart';
 import 'popular_product.dart';
 import 'special_offers.dart';
 
-class Body extends StatelessWidget {
+class HomeBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(

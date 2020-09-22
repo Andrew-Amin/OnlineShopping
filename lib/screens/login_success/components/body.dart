@@ -3,7 +3,7 @@ import 'package:shop_app/components/default_button.dart';
 import 'package:shop_app/screens/home/home_screen.dart';
 import 'package:shop_app/size_config.dart';
 
-class Body extends StatelessWidget {
+class LoginSuccessBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(

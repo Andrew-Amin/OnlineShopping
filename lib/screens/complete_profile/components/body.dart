@@ -4,7 +4,7 @@ import 'package:shop_app/size_config.dart';
 
 import 'complete_profile_form.dart';
 
-class Body extends StatelessWidget {
+class CompleteProfileBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -17,7 +17,7 @@ class Body extends StatelessWidget {
             child: Column(
               children: [
                 SizedBox(height: SizeConfig.screenHeight * 0.03),
-                Text("Complete Profile", style: headingStyle),
+                Text("Complete Profile", style: kHeadingStyle),
                 Text(
                   "Complete your details or continue  \nwith social media",
                   textAlign: TextAlign.center,

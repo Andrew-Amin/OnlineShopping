@@ -8,7 +8,7 @@ import 'product_card.dart';
 import 'search_and_filter.dart';
 import 'sliver_header_delegate.dart';
 
-class Body extends StatelessWidget {
+class ProductsBody extends StatelessWidget {
   final TextEditingController _textEditingController = TextEditingController();
   final List<String> _categories = [
     'Popular',
@@ -55,7 +55,7 @@ class Body extends StatelessWidget {
           PageHeader(),
           Text(
             'Newest products',
-            style: headingStyle,
+            style: kHeadingStyle,
           ),
           SizedBox(height: getProportionateScreenHeight(15.0)),
           SearchAndFilter(textEditingController: _textEditingController),

@@ -7,12 +7,12 @@ import 'package:shop_app/size_config.dart';
 import '../components/splash_content.dart';
 import '../../../components/default_button.dart';
 
-class Body extends StatefulWidget {
+class SplashBody extends StatefulWidget {
   @override
   _BodyState createState() => _BodyState();
 }
 
-class _BodyState extends State<Body> {
+class _BodyState extends State<SplashBody> {
   int currentPage = 0;
   List<Map<String, String>> splashData = [
     {

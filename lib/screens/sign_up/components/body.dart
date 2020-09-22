@@ -5,7 +5,7 @@ import 'package:shop_app/size_config.dart';
 
 import 'sign_up_form.dart';
 
-class Body extends StatelessWidget {
+class SignUPBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -18,7 +18,7 @@ class Body extends StatelessWidget {
             child: Column(
               children: [
                 SizedBox(height: SizeConfig.screenHeight * 0.04), // 4%
-                Text("Register Account", style: headingStyle),
+                Text("Register Account", style: kHeadingStyle),
                 Text(
                   "Complete your details or continue \nwith social media",
                   textAlign: TextAlign.center,

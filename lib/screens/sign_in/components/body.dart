@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:shop_app/components/no_account_text.dart';
 import 'package:shop_app/components/social_card.dart';
 import 'package:shop_app/screens/Products/products_screen.dart';
-import 'package:shop_app/screens/details/details_screen.dart';
+import 'package:shop_app/screens/cart/cart_screen.dart';
 import 'package:shop_app/screens/profile/profile_screen.dart';
 import '../../../size_config.dart';
 import 'sign_form.dart';
 
-class Body extends StatelessWidget {
+class SignInBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -47,7 +47,7 @@ class Body extends StatelessWidget {
                     SocialCard(
                       icon: "assets/icons/facebook-2.svg",
                       press: () {
-                        Navigator.pushNamed(context, DetailsScreen.routeName);
+                        Navigator.pushNamed(context, CartScreen.routeName);
                       },
                     ),
                     SocialCard(

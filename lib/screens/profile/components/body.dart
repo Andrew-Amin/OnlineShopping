@@ -6,7 +6,7 @@ import 'package:shop_app/size_config.dart';
 import 'profile_avatar.dart';
 import 'profile_card.dart';
 
-class Body extends StatelessWidget {
+class ProfileBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
