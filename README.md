@@ -12,7 +12,7 @@ Note that the app is under development
 ### Previews of Final UI
 <p align="left" width="100%">
   <img src="Screenshot_20210205-024626.png" width="300">
-  <img src="Screenshot_20210205-024999.PNG" width="300">
+  <img src="Screenshot_20210205-024999.png" width="300">
 </p>
 <p align="left" width="100%">
   <img src="Screenshot_20210205-024605.png" width="300">
